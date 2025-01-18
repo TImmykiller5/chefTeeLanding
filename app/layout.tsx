@@ -21,6 +21,7 @@ const notoSans = Noto_Sans({
 const delius = Delius({
   weight: "400",
   variable: "--font-delius",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
