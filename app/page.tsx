@@ -4,6 +4,8 @@ import CallToAction from './sections/callToAction'
 import EventDetail from './sections/eventDetail'
 import FoodMenu from './sections/foodMenu'
 import DrinkMenu from './sections/drinkMenu'
+import ContactUsSection from './sections/contactUsSection'
+import Footer from './sections/footer'
 
 
 const Page = () => {
@@ -14,6 +16,8 @@ const Page = () => {
       <EventDetail />
       <FoodMenu />
       <DrinkMenu />
+      <ContactUsSection />
+      <Footer />
     </div>
   )
 }

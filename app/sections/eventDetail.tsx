@@ -7,6 +7,7 @@ const EventDetail = () => {
   const date = new Date("2025-02-15T17:00:00");
   return (
     <section
+      id="event-detail"
       style={{ fontFamily: "var(--font-noto-sans)" }}
       className="w-full  text-white  md:px-20 px-4 py-10 md:py-16 pb-20 flex flex-col  relative bg-black"
     >
@@ -22,7 +23,7 @@ const EventDetail = () => {
         <div className="flex-1   ">
           <div className="flex relative overflow-hidden rounded-3xl shadow-md shadow-black/10 px-10 py-8 flex-col gap-4">
           <div className="bg-red-500/10 inset-0 blur-sm absolute "/>
-            <h3 className="text-white md:text-3xl z-50 font-medium">
+            <h3 className="text-white relative  md:text-3xl z-50 font-medium">
               Date and Time
             </h3>
             <div className="flex z-50 items-center z-60 gap-2">

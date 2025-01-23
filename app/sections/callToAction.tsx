@@ -9,7 +9,7 @@ const CallToAction = () =>
   // props: Props
   {
     return (
-      <section style={{ fontFamily: "var(--font-noto-sans)" }} className="w-full text-white  md:px-20 px-4 py-10 md:py-16 pb-20 flex flex-col min-h-screen relative bg-black/90">
+      <section id="pricing" style={{ fontFamily: "var(--font-noto-sans)" }} className="w-full text-white  md:px-20 px-4 py-10 md:py-16 pb-20 flex flex-col min-h-screen relative bg-black/90">
         <div className="flex  flex-col gap-4" style={{ fontFamily: "var(--font-noto-sans)" }}>
           <span className="text-white text-7xl font-semibold">
             Decide To <span className="font-bold text-red-700">Join</span> The
@@ -32,11 +32,11 @@ const CallToAction = () =>
               <Countdown targetDate="2025-02-15" />
             </div>
             <div className="space-y-2 flex flex-col">
-              <span className="font-medium text-lg">Current Bid</span>
-              <span className="md:text-2xl text-lg font-bold">N20,000</span>
+              <span className="font-medium text-lg">Starting from</span>
+              <span className="md:text-2xl text-lg font-bold">N30,000</span>
             </div>
           </div>
-            <Link href={"#"} className="absolute bottom-0 left-0 bg-white p-4 text-black">
+            <Link href={"https://tix.africa/ifebycheftee"} target="_blank" className="absolute bottom-0 left-0 bg-white p-4 text-black">
               <div className="md:text-xl text-lg font-semibold flex items-center gap-2 w-fit"><span>Attend the Event</span> <ArrowUpRight/></div>
             </Link>
         </div>

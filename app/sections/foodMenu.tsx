@@ -7,6 +7,7 @@ const themeTextCol = "#ff5c29"
 const FoodMenu = () => {
   return (
     <section
+      id="menu"
       style={{ fontFamily: "var(--font-noto-sans)" }}
       className="w-full text-white  md:px-20 px-4 py-10 md:py-16 pb-20 flex flex-col  relative bg-black/80"
     >
