@@ -79,6 +79,7 @@ const MobileNavBar = () => {
           alt="logo"
           width={60}
           height={60}
+          
         />
       </div>
       <div className="flex-1"></div>
@@ -162,7 +163,7 @@ const DesktopNavBar = () => {
         })}
       </aside>
       <aside className="text-white">
-        <Image src="/images/logo.png" alt="logo" width={60} height={60} />
+        <Image style={{ filter: "invert(1)" }} src="/images/logo.png" alt="logo" width={60} height={60} />
       </aside>
       <aside className="flex items-center gap-7">
         {links.map((link, index) => {

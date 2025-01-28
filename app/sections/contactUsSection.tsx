@@ -1,5 +1,7 @@
 "use client";
+import axios from "axios";
 import React from "react";
+import { toast } from "sonner";
 
 const ContactUsSection = () => {
   const [firstName, setFirstName] = React.useState("");
@@ -7,6 +9,18 @@ const ContactUsSection = () => {
   const [email, setEmail] = React.useState("");
   const [phoneNo, setPhoneNo] = React.useState("");
   const [message, setMessage] = React.useState("");
+
+  const submitForm = async () => {
+    try {
+      const url = `https://docs.google.com/forms/d/e/1FAIpQLSdok6QtzcfR99765dijrGH9rBhqc1aWLOlAUdz-fFDgEldKfg/formResponse?&submit=Submit?usp=pp_url&entry.2005620554=${firstName}&entry.1148638692=${lastName}&entry.1045781291=${email}&entry.1166974658=${phoneNo}&entry.839337160=${message}`
+      const resp = await axios.get(url)
+      console.log(resp) 
+      toast.success("Message Sent Successfully")
+    } catch (error) {
+      console.log(error)
+      toast.error("Something went wrong")
+    }
+  }
   
   return (
     <section
@@ -34,7 +48,7 @@ const ContactUsSection = () => {
               <h3 className="font-semibold text-xl md:text-2xl">Get in Touch</h3>
               <h4 className=" text-lg">We would love to hear from you</h4>
             </div>
-            <form className="flex w-full flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex w-full flex-col gap-4" onSubmit={(e) => {e.preventDefault(); submitForm()}}>
               <div className="flex  gap-4">
                 <input className="w-full p-3 rounded bg-white/10" type="text" placeholder="First name" required value={firstName} onChange={(e) => setFirstName(e.target.value)}  />
                 <input className="w-full p-3 rounded bg-white/10" type="text" placeholder="Last name" required value={lastName} onChange={(e) => setLastName(e.target.value)}  />
